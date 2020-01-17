@@ -1,14 +1,15 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {useState} from 'react';
+import {Link, NavLink} from 'react-router-dom';
 import * as styles from './navStyles';
 
-function Nav(){
+function Nav(props){
   return(
     <div>
       <ul>
-        <li><Link to= '/dadjokes'>Dad Jokes</Link></li>
-        <li><Link to= '/chuckjokes'>Chuck Norris Jokes</Link></li>
-        <li><Link to= '/geekJokes'>Geek Jokes</Link></li>
+        <li><NavLink to= '/'>Home</NavLink></li>
+        <li><NavLink to= '/dadjokes'>Dad Jokes</NavLink></li>
+        <li><NavLink to= '/chuckjokes'>Chuck Norris Jokes</NavLink></li>
+        <li><NavLink to= '/geekJokes'>Geek Jokes</NavLink></li>
       </ul>
     </div>
   );
