@@ -1,11 +1,11 @@
 import React from 'react';
 import Nav from '../Nav/Nav.js';
-import {HeaderCont, Heading_1} from './headerStyles';
+import {HeaderCont, Heading1} from './headerStyles';
 
 function Header(props){
   return(
     <HeaderCont>
-      <Heading_1>Daily Random Fun</Heading_1>
+      <Heading1>Daily Random Fun</Heading1>
       <Nav />
     </HeaderCont>
   );
