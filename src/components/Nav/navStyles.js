@@ -21,8 +21,15 @@ const ListItem= styled.li`
   justify-content: center;
   align-items; center;
   width: 20%;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
   margin-left: 1%;
   list-style: none;
+
+  &:hover{
+    cursor: pointer;
+    opacity: 0.6;
+  }
 
   a{
     display: flex;
@@ -34,10 +41,7 @@ const ListItem= styled.li`
     color: #000;
     font-size: 1.2rem;
 
-    &:hover{
-      cursor: pointer;
-      opacity: 0.6;
-    }
+    
   }
 `;
 
