@@ -10,4 +10,10 @@ const HeaderCont= styled.div`
   box-shadow: 0 5px 8px rgba(0, 0, 0, 1);
 `;
 
-export {HeaderCont};
+const Heading_1= styled.h1`
+  font-size: 2rem;
+  color: #999;
+  text-shadow: 1px 1px 3px #000;
+`;
+
+export {HeaderCont, Heading_1};
