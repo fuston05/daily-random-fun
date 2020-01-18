@@ -1,17 +1,28 @@
-import React, {useEffect} from 'react';
-import * as styles from './chuckJokeStyles';
-import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
+import React, { useState } from 'react';
+import { ChuckButton } from '../Buttons/Buttons';
+import Axios from 'axios';
 
-function ChuckJoke(props){
-  console.log(props);
- 
-    return(
-      
+function ChuckJoke(props) {
+  const [chuckJoke, setChuckJoke] = useState('');
+
+  function getChuckJoke(e) {
+    Axios
+      .get('http://api.icndb.com/jokes/random/') //chuck norris api
+      .then(res => {
+        setChuckJoke(res.data.value.joke);
+        // console.log('chuck Joke: ',res.data.value.joke);
+      })
+      .catch(err => console.log('Error: ', err))
+  }//end func
+
+  return (
+
     <div>
-      <h3>Chuck jokes go here!</h3>
+      <h2>Chuck Norris Jokes!</h2>
+      <ChuckButton func={getChuckJoke} label='Get Chuck Norris Joke' />
+      <h3>{chuckJoke}</h3>
     </div>
   );
 }
-
 
 export default ChuckJoke;
