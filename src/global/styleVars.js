@@ -36,11 +36,13 @@ const ThemeColors= {
   black: black,
   gray: gray, 
   green: green,
-  blue: blue
+  blue: blue,
+  orange: orange,
+  blue2: blue2
 }
 
 const FontColors= {
-  aColor: orange,
+  aColor: white,
   pColor: gray,
   h1Color: green,
   h2Color: blue,

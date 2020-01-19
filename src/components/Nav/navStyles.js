@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {sizes, theme, Media} from '../../global/styleVars';
+import {sizes, colors, theme, Media} from '../../global/styleVars';
 
 const NavCont= styled.nav`
   display: flex;
@@ -24,7 +24,6 @@ const ListItem= styled.li`
   max-width: 100%;
   width: 150px;
   border-radius: 3px;
-  background-color: ${theme.white};
   margin: 1.5% 1%;
   list-style: none;
 
@@ -45,7 +44,8 @@ const ListItem= styled.li`
     padding: 2% 1%;
     border-radius: 3px;
     text-decoration: none;
-    color: ${theme.black};
+    color: ${colors.aColor};
+    background-color: ${theme.black};
     font-size: ${sizes.aSize};    
   }
 `;
