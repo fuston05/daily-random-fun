@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
 import { GeekButton } from '../Buttons/Buttons';
+import {JokeCont, Heading2, Heading4} from '../../global/globalStyles';
 
 function GeekJoke() {
   const [geekJoke, setGeekJoke] = useState('');
@@ -16,11 +17,11 @@ function GeekJoke() {
   }//end func
 
   return (
-    <div>
-      <h2>Geek Jokes!</h2>
+    <JokeCont>
+      <Heading2>Geek Jokes!</Heading2>
       <GeekButton func={getGeekJoke} label='Get Geek Joke' />
-      <h3>{geekJoke}</h3>
-    </div>
+      <Heading4>{geekJoke}</Heading4>
+    </JokeCont>
   );
 }
 

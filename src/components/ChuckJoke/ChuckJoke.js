@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChuckButton } from '../Buttons/Buttons';
+import {JokeCont, Heading2, Heading4} from '../../global/globalStyles';
 import Axios from 'axios';
 
 function ChuckJoke(props) {
@@ -17,11 +18,11 @@ function ChuckJoke(props) {
 
   return (
 
-    <div>
-      <h2>Chuck Norris Jokes!</h2>
+    <JokeCont>
+      <Heading2>Chuck Norris Jokes!</Heading2>
       <ChuckButton func={getChuckJoke} label='Get Chuck Norris Joke' />
-      <h3>{chuckJoke}</h3>
-    </div>
+      <Heading4>{chuckJoke}</Heading4>
+    </JokeCont>
   );
 }
 

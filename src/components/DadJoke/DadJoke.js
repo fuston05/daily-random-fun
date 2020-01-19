@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
 import {PunchLineButton, DadButton} from '../Buttons/Buttons';
+import {JokeCont, Heading2, Heading4} from '../../global/globalStyles';
 
 function DadJoke(props) {
   const [joke, setJoke] = useState('');
@@ -27,12 +28,12 @@ function DadJoke(props) {
   }//end func
 
     return (
-      <div>
-        <h2>Dad Jokes!</h2>
+      <JokeCont>
+        <Heading2>Dad Jokes!</Heading2>
         <DadButton display= {dadDisplay} func={getDadJoke} label= 'Get Dad Joke' />
         <PunchLineButton display= {punchLineDisplay} func={getPuchLine} label= 'See Punch Line' />
-        <h3>{joke}</h3>     
-      </div>
+        <Heading4>{joke}</Heading4>     
+      </JokeCont>
     );
 }
 
