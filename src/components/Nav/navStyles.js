@@ -1,17 +1,18 @@
 import styled from 'styled-components';
-
-// div, ul, li, a
+import {sizes, theme, Media} from '../../global/styleVars';
 
 const NavCont= styled.nav`
   display: flex;
-  justify-contents: flex-end;
-  width: 70%;
-  padding: 2% 0 2% 0;
+  justify-contents: center;
+  align-items: center;
+  width: 100%;
+  margin: 1% 0;
 `;
 
 const ULItem= styled.ul`
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
 `;
@@ -20,11 +21,16 @@ const ListItem= styled.li`
   display: flex;
   justify-content: center;
   align-items; center;
-  width: 20%;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.8);
-  margin-left: 1%;
+  max-width: 100%;
+  width: 150px;
+  border-radius: 3px;
+  background-color: ${theme.white};
+  margin: 1.5% 1%;
   list-style: none;
+
+  @media ${Media.tablet}{
+    width: 100%;
+  }
 
   &:hover{
     cursor: pointer;
@@ -34,14 +40,13 @@ const ListItem= styled.li`
   a{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 2% 2%;
-    border-radius: 5px;
+    padding: 2% 1%;
+    border-radius: 3px;
     text-decoration: none;
-    color: #000;
-    font-size: 1.2rem;
-
-    
+    color: ${theme.black};
+    font-size: ${sizes.aSize};    
   }
 `;
 

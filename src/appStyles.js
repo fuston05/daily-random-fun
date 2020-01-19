@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {colors} from './global/styleVars';
 
 const MainCont= styled.div`
   display: flex;
@@ -8,8 +9,7 @@ const MainCont= styled.div`
   max-width: 100%;
   width: 100%;
   height: 100vh;
-  background-color: #fff;
+  background-color: ${colors.white};
 `;
-
 
 export {MainCont};

@@ -1,12 +1,14 @@
 import styled from 'styled-components';
-import {FontColors as colors, FontSizes as sizes, ThemeColors as theme} from '../../global/styleVars';
+import {colors, sizes, theme} from '../../global/styleVars';
 
 const HeaderCont= styled.div`
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   background-color: ${theme.gray};
   max-width: 100%;
+  padding: 1% 1% 0 1%;
   width: 100%;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 1);
 `;
